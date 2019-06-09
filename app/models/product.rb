@@ -7,5 +7,7 @@ class Product < ApplicationRecord
             presence: true
   validates :weight, 
             numericality: true
+  validates :in_stodk,
+            inclusion: {in: [true, false]} # or exclusion: {in: [nil]}
 
 end
